@@ -72,7 +72,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
     /**
-     * 扩展消息转换器,统一
+     * 扩展消息转换器,统一时间格式
      */
     @Override
     protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
