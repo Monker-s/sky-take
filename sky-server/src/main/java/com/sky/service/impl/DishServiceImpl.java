@@ -151,4 +151,25 @@ public class DishServiceImpl implements DishService {
 
 
     }
+
+    /**
+     * 批量起售停售
+     * @param status
+     * @param id
+     */
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = new Dish().builder().status(status).id(id).build();
+        dishMapper.update(dish);
+    }
+
+    /**
+     * 获取菜品的分类数据
+     * @return
+     */
+    @Override
+    public List<Dish> list(Long categoryId) {
+        List<Dish> list = dishMapper.list(categoryId);
+        return list;
+    }
 }
